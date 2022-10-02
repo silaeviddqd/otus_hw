@@ -1,2 +1,2 @@
 # otus_hw
-Репозиторий для домашних заданий курса Java Developer Professional
+Репозиторий Силаева Ивана, для домашних заданий курса Java Developer Professional
