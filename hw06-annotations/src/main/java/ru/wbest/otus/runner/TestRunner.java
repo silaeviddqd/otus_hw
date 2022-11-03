@@ -18,7 +18,6 @@ public class TestRunner {
     private final Method[] methods;
 
     public TestRunner(Class<?> clazz) throws InvocationTargetException, InstantiationException, IllegalAccessException {
-        instance = clazz.getDeclaredConstructors()[0].newInstance(null);
         methods = clazz.getDeclaredMethods();
     }
 
@@ -38,6 +37,8 @@ public class TestRunner {
     }
 
     private void before() {
+        instance = clazz.getDeclaredConstructors()[0].newInstance(null);
+
         Method before = Arrays
                 .stream(methods)
                 .filter(method -> method.isAnnotationPresent(Before.class))
